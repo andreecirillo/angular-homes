@@ -6,10 +6,11 @@ import { HousingLocation } from './housing-location';
 })
 export class HousingService {
     
-    url = 'http://localhost:3000/locations';
+    url = 'https://angular-homes-db.glitch.me/locations';    
 
     async getAllHousingLocations(): Promise<HousingLocation[]> {
-        const data = await fetch(this.url);
+        const data = await fetch(this.url);        
+
         return await data.json() ?? [];
     }
 
